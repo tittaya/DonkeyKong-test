@@ -22,7 +22,7 @@ public class DonkeyKongGame extends BasicGame  {
 	
 	@Override
     public void initialise() {
-	    // GITTEST
+	    // GITTEST-1
        graphic = new Texture("Kong1.png");
         sprite = new Sprite(graphic);
         Kong = new Player(sprite);
