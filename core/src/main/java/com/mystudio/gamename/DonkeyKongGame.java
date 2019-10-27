@@ -5,6 +5,7 @@ import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
+import org.mini2Dx.core.game.ApplicationListener;
 import org.mini2Dx.core.game.BasicGame;
 import org.mini2Dx.core.graphics.Graphics;
 import org.mini2Dx.core.graphics.Sprite;
@@ -22,13 +23,12 @@ public class DonkeyKongGame extends BasicGame  {
 	
 	@Override
     public void initialise() {
-	    // GITTEST-1
        graphic = new Texture("Kong1.png");
         sprite = new Sprite(graphic);
         Kong = new Player(sprite);
         MyInputProcessor inputProcessor = new MyInputProcessor(Kong);
         Gdx.input.setInputProcessor(inputProcessor);
-//        sprite.setPosition(0,0);
+
 
     }
     
