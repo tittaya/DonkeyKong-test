@@ -44,21 +44,36 @@ public  class Player extends Rectangle {
     }
 
 
-    public void Movement(){
-        if(leftMove){ point.set(point.getX() - 4f, point.getY()); }
-        if(!leftMove) { point.set(point.getX() , point.getY()); }
-        if(rightMove){ point.set(point.getX() + 4f, point.getY()); }
-        if(!rightMove){ point.set(point.getX() , point.getY()); }
-        if(upMove){ point.set(point.getX() , point.getY() - 4f); }
-        if(!upMove){ point.set(point.getX() , point.getY()); }
-        if(downMove){ point.set(point.getX() , point.getY() + 4f); }
-        if(!downMove){ point.set(point.getX() , point.getY()); }
+    public void movement(){
+        if(leftMove){
+            point.set(point.getX() - 4f, point.getY());
+        }
+        if(!leftMove) {
+            point.set(point.getX() , point.getY());
+        }
+        if(rightMove){
+            point.set(point.getX() + 4f, point.getY());
+        }
+        if(!rightMove){
+            point.set(point.getX() , point.getY());
+        }
+        if(upMove){
+            point.set(point.getX() , point.getY() - 4f);
+        }
+        if(!upMove){
+            point.set(point.getX() , point.getY());
+        }
+        if(downMove){
+            point.set(point.getX() , point.getY() + 4f);
+        }
+        if(!downMove){
+            point.set(point.getX() , point.getY());
+        }
     }
 
 
     public void update() {
         point.preUpdate();
-
     }
 
     public void interpolate(float alpha) {
@@ -68,7 +83,6 @@ public  class Player extends Rectangle {
 
     public void render(Graphics g) {
         g.drawSprite(sprite, point.getRenderX(), point.getRenderY());
-
     }
 
 
