@@ -35,12 +35,13 @@ public class DonkeyKongGame extends BasicGame  {
     @Override
     public void update(float delta) {
         Kong.update();
+        Kong.Movement();
 
     }
     
     @Override
     public void interpolate(float alpha) {
-
+        Kong.interpolate(alpha);
     }
 
     @Override
