@@ -4,10 +4,12 @@ import com.badlogic.gdx.Input;
 import com.badlogic.gdx.InputProcessor;
 
 public class MyInputProcessor implements InputProcessor {
-    private Player player;
+    private Monkey monkey;
+    private Man man;
 
-    public MyInputProcessor(Player player) {
-        this.player = player;
+    public MyInputProcessor(Monkey monkey, Man man) {
+        this.monkey = monkey;
+        this.man = man;
     }
 
 
@@ -15,16 +17,28 @@ public class MyInputProcessor implements InputProcessor {
         switch (keycode)
         {
             case Input.Keys.D:
-                player.setRightMove(true);
+                monkey.setD_Pressed(true);
                 break;
             case Input.Keys.A:
-                player.setLeftMove(true);
+                monkey.setA_Pressed(true);
                 break;
             case Input.Keys.W:
-                player.setUpMove(true);
+                monkey.setW_Pressed(true);
                 break;
             case Input.Keys.S:
-                player.setDownMove(true);
+                monkey.setS_Pressed(true);
+                break;
+            case Input.Keys.RIGHT:
+                man.setRight_Pressed(true);
+                break;
+            case Input.Keys.LEFT:
+                man.setLeft_Pressed(true);
+                break;
+            case Input.Keys.UP:
+                man.setUp_Pressed(true);
+                break;
+            case Input.Keys.DOWN:
+                man.setDown_Pressed(true);
                 break;
         }
         return true;
@@ -34,16 +48,28 @@ public class MyInputProcessor implements InputProcessor {
         switch (keycode)
         {
             case Input.Keys.D:
-                player.setRightMove(false);
+                monkey.setD_Pressed(false);
                 break;
             case Input.Keys.A:
-                player.setLeftMove(false);
+                monkey.setA_Pressed(false);
                 break;
             case Input.Keys.W:
-                player.setUpMove(false);
+                monkey.setW_Pressed(false);
                 break;
             case Input.Keys.S:
-                player.setDownMove(false);
+                monkey.setS_Pressed(false);
+                break;
+            case Input.Keys.RIGHT:
+                man.setRight_Pressed(false);
+                break;
+            case Input.Keys.LEFT:
+                man.setLeft_Pressed(false);
+                break;
+            case Input.Keys.UP:
+                man.setUp_Pressed(false);
+                break;
+            case Input.Keys.DOWN:
+                man.setDown_Pressed(false);
                 break;
         }
         return true;
